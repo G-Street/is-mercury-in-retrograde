@@ -3,38 +3,50 @@
 from skyfield.api import load
 import datetime, time, re
 
-t = datetime.datetime.now() - datetime.timedelta(minutes=-1)
-precise_second = t.strftime("%-S.%f")
+# get time five seconds ago
+t1 = datetime.datetime.now() - datetime.timedelta(seconds=-5)
+precise_second_t1 = t1.strftime("%-S.%f")
+# get time now
+t2 = datetime.datetime.now()
+precise_second_t2 = t2.strftime("%-S.%f")
 
+# fetch data from the United States Naval Observatory and the International Earth Rotation Service
 planets = load('de421.bsp')
+# define planets earth and mercury
 earth, mercury = planets['earth'], planets['mercury']
 
+# Load a timescale so that we can translate between different systems for expressing time
 ts = load.timescale()
-tthen = ts.now()
-tnow = ts.now()
-# tthen = ts.utc(t.year, t.month, t.day, t.hour, t.minute, float(precise_second))
 
-# tnow = ts.utc(2020, 1, 1, 0, 1, 0)
-# tthen = ts.utc(2020, 1, 1, 0, 0, 0)
+# Set times 1 and 2 as terrestrial time
+ttime1 = ts.utc(t1.year, t1.month, t1.day, t1.hour, t1.minute, float(precise_second_t1))
+ttime2 = ts.utc(t2.year, t2.month, t2.day, t2.hour, t2.minute, float(precise_second_t2))
 
-astrometric_now = earth.at(tnow).observe(mercury)
-astrometric_then = earth.at(tthen).observe(mercury)
+# sanity check for times 1 and 2 terrestrial time for when mercury is not in retrograde
+# ttime1 = ts.utc(2020, 1, 1, 12, 0, 0)
+# ttime2 = ts.utc(2020, 1, 1, 12, 5, 0)
 
-ra_n, dec_n, distance_n = astrometric_now.radec()
-ra_t, dec_t, distance_t = astrometric_then.radec()
+# get atrometric measurements from earth to mercury at times 1 and 2
+astrometric1 = earth.at(ttime1).observe(mercury)
+astrometric2 = earth.at(ttime2).observe(mercury)
 
-arr_t = re.sub(r'[a-zA-Z]+', '', str(ra_t)).split()
-arr_n = re.sub(r'[a-zA-Z]+', '', str(ra_n)).split()
+# set values from astrometric arrays
+ra1, dec1, distance1 = astrometric1.radec()
+ra2, dec2, distance2 = astrometric2.radec()
+
+Split arrays
+arr1 = re.sub(r'[a-zA-Z]+', '', str(ra1)).split()
+arr2 = re.sub(r'[a-zA-Z]+', '', str(ra2)).split()
 
 ftr = [3600,60,1]
 
-time_now_seconds = sum([a*b for a,b in zip(ftr, map(float,arr_n))])
-time_then_seconds = sum([a*b for a,b in zip(ftr, map(float,arr_t))])
+# Get Angle outputs in seconds
+time1_seconds = sum([a*b for a,b in zip(ftr, map(float,arr1))])
+time2_seconds = sum([a*b for a,b in zip(ftr, map(float,arr2))])
 
-# print(time_then_seconds - time_now_seconds)
+# print(time2_seconds - time1_seconds)
 
-print('Then:', ra_t)
-print('Now: ', ra_n)
-
-# nextTime = datetime.datetime.now() + datetime.timedelta(minutes = -1)
-# print("Next request @ " + nextTime.strftime("%Y-%m-%d %H:%M:%S"))
+print('Then:', ra1)
+print('Now: ', ra2)
+# print('Then:', time1_seconds)
+# print('Now: ', time2_seconds)
