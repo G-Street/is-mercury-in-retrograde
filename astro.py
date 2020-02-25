@@ -34,7 +34,7 @@ astrometric2 = earth.at(ttime2).observe(mercury)
 ra1, dec1, distance1 = astrometric1.radec()
 ra2, dec2, distance2 = astrometric2.radec()
 
-Split arrays
+# Split arrays
 arr1 = re.sub(r'[a-zA-Z]+', '', str(ra1)).split()
 arr2 = re.sub(r'[a-zA-Z]+', '', str(ra2)).split()
 
