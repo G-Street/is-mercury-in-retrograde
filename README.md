@@ -4,7 +4,7 @@
 
 ### Ephemeris
 
-> *(plural: ephemerides)*: A table or data file giving the calculated positions of a celestial object at regular intervals throughout a period
+> *(plural: ephemerides)*: A table or data file giving the calculated positions of a celestial object at regular intervals throughout a period.
 
 ---
 
