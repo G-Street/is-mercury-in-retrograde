@@ -17,8 +17,8 @@ time.sleep(7)
 ttime2 = ts.now()
 
 # sanity check for times 1 and 2 terrestrial time for when mercury is not in retrograde
-# ttime1 = ts.utc(2020, 1, 1, 12, 1, 0)
-# ttime2 = ts.utc(2020, 1, 1, 12, 1, 5)
+ttime1 = ts.utc(2020, 1, 1, 12, 1, 0)
+ttime2 = ts.utc(2020, 1, 1, 12, 1, 5)
 
 # get atrometric measurements from earth to mercury at times 1 and 2
 astrometric1 = earth.at(ttime1).observe(mercury)
