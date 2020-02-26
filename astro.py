@@ -59,12 +59,14 @@ def get_MercRet():
 
     # interpret output of differences in RAs
     if RA_diff < 0.000000:
-        MercRet = True
+        MercRet = "True"
     elif RA_diff > 0.000000:
-        MercRet = False
+        MercRet = "False"
     else:
-        MercRet = None
+        MercRet = "None"
         
-    bool(MercRet)
+    return MercRet
 
-get_MercRet
+booleanVal = get_MercRet()
+
+print(booleanVal)
