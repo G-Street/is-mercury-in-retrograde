@@ -12,7 +12,7 @@ earth, mercury = planets['earth'], planets['mercury']
 ts = load.timescale()
 
 # Set times 1 and 2 as terrestrial time
-t1 = datetime.datetime.now() - datetime.timedelta(seconds=5)
+t1 = datetime.datetime.now() - datetime.timedelta(minutes=5)
 precise_second_t1 = float(t1.strftime("%-S.%f"))
 t2 = datetime.datetime.now()
 precise_second_t2 = float(t2.strftime("%-S.%f"))
