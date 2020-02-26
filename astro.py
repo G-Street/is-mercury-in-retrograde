@@ -12,13 +12,22 @@ earth, mercury = planets['earth'], planets['mercury']
 ts = load.timescale()
 
 # Set times 1 and 2 as terrestrial time
-ttime1 = ts.now()
-time.sleep(7)
-ttime2 = ts.now()
+t1 = datetime.datetime.now() - datetime.timedelta(seconds=5)
+precise_second_t1 = float(t1.strftime("%-S.%f"))
+t2 = datetime.datetime.now()
+precise_second_t2 = float(t2.strftime("%-S.%f"))
+
+# Sanity check for times
+#print(t1.year, t1.month, t1.day, t1.hour, t1.minute, precise_second_t1)
+#print(t2.year, t2.month, t2.day, t2.hour, t2.minute, precise_second_t2)
+
+# setting times 1 and 2 as terrestrial times
+ttime1 = ts.utc(t1.year, t1.month, t1.day, t1.hour, t1.minute, precise_second_t1)
+ttime2 = ts.utc(t2.year, t2.month, t2.day, t2.hour, t2.minute, precise_second_t2)
 
 # sanity check for times 1 and 2 terrestrial time for when mercury is not in retrograde
-ttime1 = ts.utc(2020, 1, 1, 12, 1, 0)
-ttime2 = ts.utc(2020, 1, 1, 12, 1, 5)
+#ttime1 = ts.utc(2020, 4, 1, 12, 0, 0)
+#ttime2 = ts.utc(2020, 4, 1, 12, 5, 0)
 
 # get atrometric measurements from earth to mercury at times 1 and 2
 astrometric1 = earth.at(ttime1).observe(mercury)
@@ -44,9 +53,9 @@ time1_seconds = sum([a*b for a,b in zip(ftr, map(float,arr1))])
 time2_seconds = sum([a*b for a,b in zip(ftr, map(float,arr2))])
 
 # interpret output of differences in RAs
-if float(time2_seconds - time1_seconds) < 0:
+if float(time2_seconds - time1_seconds) < 0.000000:
     print("The right ascension of Mercury is negative: Mercury is in retrograde")
-elif float(time2_seconds - time1_seconds) > 0:
+elif float(time2_seconds - time1_seconds) > 0.000000:
     print("The right ascension of Mercury is positive: Mercury is not in retrograde")
 else:
     print("The stars are not aligned.  I cannot tell if Mercury is in retrograde at the present time.  Please come back later.")

@@ -6,7 +6,7 @@ m = ephem.Mercury
 
 # Load a timescale so that we can translate between different systems for expressing time
 t1 = datetime.datetime.now()
-time.sleep(7)
+time.sleep(5)
 t2 = datetime.datetime.now()
 
 # Setting values of RA for times 1 and 2
@@ -30,9 +30,9 @@ time2_seconds = sum([a*b for a,b in zip(ftr, map(float,arr2))])
 
 
 # interpret output of differences in RAs
-if float(time2_seconds - time1_seconds) < 0:
+if float(time2_seconds - time1_seconds) < 0.000000:
     print("The right ascension of Mercury is negative: Mercury is in retrograde")
-elif float(time2_seconds - time1_seconds) > 0:
+elif float(time2_seconds - time1_seconds) > 0.000000:
     print("The right ascension of Mercury is positive: Mercury is not in retrograde")
 else:
     print("The stars are not aligned.  I cannot tell if Mercury is in retrograde at the present time.  Please come back later.")
