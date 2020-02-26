@@ -69,4 +69,4 @@ def get_MercRet():
 
 booleanVal = get_MercRet()
 
-print(booleanVal)
+#print(booleanVal)
