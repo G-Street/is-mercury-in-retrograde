@@ -52,10 +52,13 @@ ftr = [3600,60,1]
 time1_seconds = sum([a*b for a,b in zip(ftr, map(float,arr1))])
 time2_seconds = sum([a*b for a,b in zip(ftr, map(float,arr2))])
 
+# get difference in RAs between times
+RA_diff = float(time2_seconds - time1_seconds)
+
 # interpret output of differences in RAs
-if float(time2_seconds - time1_seconds) < 0.000000:
-    print("The right ascension of Mercury is negative: Mercury is in retrograde")
-elif float(time2_seconds - time1_seconds) > 0.000000:
-    print("The right ascension of Mercury is positive: Mercury is not in retrograde")
+if RA_diff < 0.000000:
+    MercRet = True
+elif RA_diff > 0.000000:
+    MercRet = False
 else:
-    print("The stars are not aligned.  I cannot tell if Mercury is in retrograde at the present time.  Please come back later.")
+    MercRet = None
