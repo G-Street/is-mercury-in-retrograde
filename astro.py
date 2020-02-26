@@ -64,4 +64,7 @@ def get_MercRet():
         MercRet = False
     else:
         MercRet = None
+        
+    bool(MercRet)
 
+get_MercRet
