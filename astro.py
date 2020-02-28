@@ -14,10 +14,8 @@ def get_MercRet():
     ts = load.timescale()
 
     # Set times 1 and 2 as terrestrial time
-    t1 = datetime.datetime.now() - datetime.timedelta(minutes=5)
+    t1 = datetime.datetime.utcnow() - datetime.timedelta(minutes=5)
     precise_second_t1 = float(t1.strftime("%-S.%f"))
-    t2 = datetime.datetime.now()
-    precise_second_t2 = float(t2.strftime("%-S.%f"))
 
     # Sanity check for times
     #print(t1.year, t1.month, t1.day, t1.hour, t1.minute, precise_second_t1)
@@ -25,8 +23,7 @@ def get_MercRet():
 
     # setting times 1 and 2 as terrestrial times
     ttime1 = ts.utc(t1.year, t1.month, t1.day, t1.hour, t1.minute, precise_second_t1)
-    ttime2 = ts.utc(t2.year, t2.month, t2.day, t2.hour, t2.minute, precise_second_t2)
-
+    ttime2 = ts.now()
     # sanity check for times 1 and 2 terrestrial time for when mercury is not in retrograde
     #ttime1 = ts.utc(2020, 4, 1, 12, 0, 0)
     #ttime2 = ts.utc(2020, 4, 1, 12, 5, 0)
@@ -59,14 +56,15 @@ def get_MercRet():
 
     # interpret output of differences in RAs
     if RA_diff < 0.000000:
-        MercRet = "True"
+        MercRet = True
     elif RA_diff > 0.000000:
-        MercRet = "False"
+        MercRet = False
     else:
-        MercRet = "None"
+        MercRet = None
         
     return MercRet
 
+
 booleanVal = get_MercRet()
 
-#print(booleanVal)
+print(booleanVal)
