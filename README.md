@@ -28,8 +28,7 @@ This is a description for the back-end of a website which tells you whether or n
 
 Our dependency for [Flask](https://palletsprojects.com/p/flask/) is that you have Python 3.3+.  You need to check this is installed:
 ```
-python --version # run on Linux; then use `pip` in next steps
-python3 --version # run on macOS then use `pip3` in next steps
+python[3] --version
 ```
 Now download your virtual environment toolbox:
 ```
