@@ -6,11 +6,22 @@
 
 > *(plural: ephemerides)*: A table or data file giving the calculated positions of a celestial object at regular intervals throughout a period.
 
----
-
 ### What am I reading?
 
 This is a description for the back-end of a website which tells you whether or not Mercury is in retrograde.  This project is dedicated to Olivia.  This project has been developed by [jakewilliami](https://github.com/jakewilliami) and [andfield](https://github.com/andfield).
+
+---
+
+### Contents
+
+- [What am I reading?](#what-am-i-reading?)
+- [How to set up this project](#how-to-set-up-this-project)
+- [Contents](#contents)
+- [What is retrograde motion?](#what-is-reterograde-motion?)
+- [Calculation and Generation of Ephemerides](#calculation-and-generation-of-ephemerides)
+- [Room for improvement](#room-for-improvement)
+
+---
 
 ### How to set up this project
 
