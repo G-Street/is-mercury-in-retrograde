@@ -18,7 +18,7 @@ This is a description for the back-end of a website which tells you whether or n
 - [What am I reading?](#what-am-i-reading)
 - [Contents](#contents)
 - [How to set up this project](#how-to-set-up-this-project)
-- [What is retrograde motion?](#what-is-reterograde-motion)
+- [What is retrograde motion?](#what-is-retrograde-motion)
 - [Calculation and Generation of Ephemerides](#calculation-and-generation-of-ephemerides)
 - [Room for improvement](#room-for-improvement)
 
