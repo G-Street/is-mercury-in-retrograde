@@ -12,6 +12,30 @@
 
 This is a description for the back-end of a website which tells you whether or not Mercury is in retrograde.  This project is dedicated to Olivia.  This project has been developed by [jakewilliami](https://github.com/jakewilliami) and [andfield](https://github.com/andfield).
 
+### How to set up this project
+
+Our dependency for [Flask](https://palletsprojects.com/p/flask/) is that you have Python 3.3+.  You need to check this is installed:
+```
+python --version # run on Linux; then use `pip` in next steps
+python3 --version # run on macOS then use `pip3` in next steps
+```
+Now download your virtual environment toolbox:
+```
+pip[3] install virtualenv
+```
+`cd` to your project directory and run
+```
+python[3] -m venv <project-name>
+virtualenv <project-name>
+source <project-name>/bin/activate
+```
+Now we need to set up flask and get our dependencies.  Run
+```
+pip[3] install -r requirements.txt
+```
+And you are set up.  Run `python[3] app.py` to get the local server running.  Non-local server is currently in progress.  You can run `deactivate` to escape your virtual environment.
+
+
 ### What is retrograde motion?
 All objects in the sky move East to West during a night due to the West to East rotation of the Earth.  Retrograde motion is when a planet moves East to West relative to the stars.
 
