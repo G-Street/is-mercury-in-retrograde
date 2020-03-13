@@ -1,5 +1,8 @@
-# Silly macOS stuff
+### Silly macOS stuff ###
 **/.DS_Store
+
+### Silly VSCode stuff ###
+**/.vscode/
 
 # skyfield data files
 **/Leap_Second.dat
@@ -23,7 +26,7 @@ db.sqlite3
 media
 **/media
 
-# Virtualenv
+### Virtualenv ###
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 **/.Python
 **/[Bb]in
@@ -35,3 +38,35 @@ media
 **/pyvenv.cfg
 **/.venv
 **/pip-selfcheck.json
+
+### Axios ###
+**/*.iml
+**/.idea
+**/.tscache
+**/.DS_Store
+**/node_modules/
+**/typings/
+**/coverage/
+**/test/typescript/axios.js*
+**/sauce_connect.log
+**/package-lock.json
+
+### Vue ###
+**/.DS_Store
+**/node_modules
+**/*.log
+**/explorations
+**/TODOs.md
+**/dist/*.gz
+**/dist/*.map
+**/dist/vue.common.min.js
+**/test/e2e/reports
+**/test/e2e/screenshots
+**/coverage
+**/RELEASE_NOTE*.md
+**/dist/*.js
+**/packages/vue-server-renderer/basic.js
+**/packages/vue-server-renderer/build.js
+**/packages/vue-server-renderer/server-plugin.js
+**/packages/vue-server-renderer/client-plugin.js
+**/packages/vue-template-compiler/build.js
