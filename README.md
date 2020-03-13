@@ -6,11 +6,46 @@
 
 > *(plural: ephemerides)*: A table or data file giving the calculated positions of a celestial object at regular intervals throughout a period.
 
----
-
 ### What am I reading?
 
 This is a description for the back-end of a website which tells you whether or not Mercury is in retrograde.  This project is dedicated to Olivia.  This project has been developed by [jakewilliami](https://github.com/jakewilliami) and [andfield](https://github.com/andfield).
+
+---
+
+### Contents
+
+- [Ephemeris](#ephemeris)
+- [What am I reading?](#what-am-i-reading)
+- [Contents](#contents)
+- [How to set up this project](#how-to-set-up-this-project)
+- [What is retrograde motion?](#what-is-retrograde-motion)
+- [Calculation and Generation of Ephemerides](#calculation-and-generation-of-ephemerides)
+- [Room for improvement](#room-for-improvement)
+
+---
+
+### How to set up this project
+
+Our dependency for [Flask](https://palletsprojects.com/p/flask/) is that you have Python 3.3+.  You need to check this is installed:
+```
+python[3] --version
+```
+Now download your virtual environment toolbox:
+```
+pip[3] install virtualenv
+```
+`cd` to your project directory and run
+```
+python[3] -m venv <project-name>
+virtualenv <project-name>
+source <project-name>/bin/activate
+```
+Now we need to set up flask and get our dependencies.  Run
+```
+pip[3] install -r requirements.txt
+```
+And you are set up.  Run `python[3] app.py` to get the local server running.  Non-local server is currently in progress.  You can run `deactivate` to escape your virtual environment.
+
 
 ### What is retrograde motion?
 All objects in the sky move East to West during a night due to the West to East rotation of the Earth.  Retrograde motion is when a planet moves East to West relative to the stars.
