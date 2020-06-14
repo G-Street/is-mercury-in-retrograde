@@ -1,0 +1,1 @@
+This directory holds alternative programmes to calculate whether or not Mercury is in retrograde.  These programmes were created at the beginning of this project, when speculating how we should calculate this.
