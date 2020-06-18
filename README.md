@@ -75,6 +75,25 @@ With the help of these excellent resources, we have managed to calculate whether
 
 ---
 
+### Setting Up Julia Alternative
+
+Ensure you have [Julia](https://julialang.org/) downloaded and installed.  We have created a virtual environment in `alt/astro-alt.jl/`.  To use this on your machine, run
+```
+$ cd is-mercury-in-retrograde/alt/astro-alt.jl/
+$ julia
+julia> ]
+pkg> activate .
+(astro-alt.jl) instantiate
+```
+To run the project, you will need to specify the project directory:
+```
+$ cd is-mercury-in-retrograde/alt/astro-alt.jl/
+$ julia --project=. astro-alt.jl
+```
+See the [manual](is-mercury-in-retrograde/alt/astro-alt.jl/) for more information on this.
+
+---
+
 ### Room for improvement
 
 There is room for improvement.  Within the script `astro.py` and `astro-alt.py`, we have defined two points in time by defining one, waiting, and defining another.  This is undoubtably not the best way to do this, but this was the only way I found that works.  In the early drafts of the script, we would define a time `t1` which is five seconds before the current time, but this did not work for some reason.  We would always be open for any help on this.
