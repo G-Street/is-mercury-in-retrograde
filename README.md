@@ -95,7 +95,8 @@ See the [manual](is-mercury-in-retrograde/alt/astro-alt.jl/) for more informatio
 Finally, you need to download the data file:
 ```
 $ cd is-mercury-in-retrograde/alt/astro-alt.jl/
-$ wget https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp
+$ wget https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp # for the JPLEphemeris package
+$ wget ftp://ftp.imcce.fr/pub/ephem/planets/inpop13c/inpop13c_TDB_m100_p100_tt.dat # for the CALCEPH package
 ```
 
 ---
