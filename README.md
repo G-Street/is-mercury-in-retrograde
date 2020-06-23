@@ -92,6 +92,12 @@ $ julia --project=. astro-alt.jl
 ```
 See the [manual](is-mercury-in-retrograde/alt/astro-alt.jl/) for more information on this.
 
+Finally, you need to download the data file:
+```
+$ cd is-mercury-in-retrograde/alt/astro-alt.jl/
+$ wget https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp
+```
+
 ---
 
 ### Room for improvement
