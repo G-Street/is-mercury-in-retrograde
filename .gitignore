@@ -7,6 +7,7 @@
 # skyfield data files
 **/Leap_Second.dat
 **/de421.bsp
+**/de430.bsp
 **/deltat.data
 **/deltat.preds
 
