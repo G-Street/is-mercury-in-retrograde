@@ -104,3 +104,7 @@ $ wget ftp://ftp.imcce.fr/pub/ephem/planets/inpop13c/inpop13c_TDB_m100_p100_tt.d
 ### Room for improvement
 
 There is room for improvement.  Within the script `astro.py` and `astro-alt.py`, we have defined two points in time by defining one, waiting, and defining another.  This is undoubtably not the best way to do this, but this was the only way I found that works.  In the early drafts of the script, we would define a time `t1` which is five seconds before the current time, but this did not work for some reason.  We would always be open for any help on this.
+
+### To Do
+
+ - Create request for user accessing website to give back-end user's timezone for python calculations.
