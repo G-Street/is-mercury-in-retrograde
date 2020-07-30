@@ -108,3 +108,5 @@ There is room for improvement.  Within the script `astro.py` and `astro-alt.py`,
 ### To Do
 
  - Create request for user accessing website to give back-end user's timezone for python calculations.
+ - Work on pyinstaller standalone executiable for any server.
+ - Work on frontend
