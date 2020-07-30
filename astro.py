@@ -11,7 +11,7 @@ def get_MercRet():
     earth, mercury = planets['earth'], planets['mercury']
 
     # Load a timescale so that we can translate between different systems for expressing time
-    ts = load.timescale()
+    ts = load.timescale(builtin=True)
 
     # Set times 1 and 2 as terrestrial time
     t1 = datetime.datetime.utcnow() - datetime.timedelta(minutes=5)
