@@ -4,12 +4,13 @@
 ### Silly VSCode stuff ###
 **/.vscode/
 
-# skyfield data files
+# astro data files
 **/Leap_Second.dat
 **/de421.bsp
 **/de430.bsp
 **/deltat.data
 **/deltat.preds
+**/inpop13c_TDB_m100_p100_tt.dat
 
 ### Django ###
 *.log
