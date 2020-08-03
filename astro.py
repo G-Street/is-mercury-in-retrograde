@@ -57,12 +57,12 @@ def get_MercRet():
     # interpret output of differences in RAs
     if RA_diff < 0.000000:
         # MercRet = "The right ascension of Mercury is negative: Mercury is in retrograde"
-    	MercRet = True
+    	MercRet = "Yes"
     elif RA_diff > 0.000000:
         # MercRet = "The right ascension of Mercury is positive: Mercury is not in retrograde"
-    	MercRet = False
+    	MercRet = "No"
     else:
-        MerRet = None
+        MerRet = "The stars are not alligned"
 	# MercRet = "The stars are not aligned. I cannot tell if Mercury is in retrograde at the present time. Please come back later."
         
     return MercRet
