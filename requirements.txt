@@ -18,6 +18,6 @@ sgp4==2.4
 six==1.14.0
 skyfield==1.17
 twilio==6.36.0
-urllib3==1.25.8
+urllib3==1.26.5
 Werkzeug==1.0.0
 zope.interface==4.7.1
