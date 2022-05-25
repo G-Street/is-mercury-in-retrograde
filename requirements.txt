@@ -11,7 +11,7 @@ Jinja2==2.11.1
 jplephem==2.13
 MarkupSafe==1.1.1
 numpy==1.18.1
-PyJWT==1.7.1
+PyJWT==2.4.0
 pytz==2019.3
 requests==2.23.0
 sgp4==2.4
