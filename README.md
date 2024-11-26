@@ -2,10 +2,6 @@
   Is Mercury in retrograde ??
 </h1>
 
-### Ephemeris
-
-> *(plural: ephemerides)*: A table or data file giving the calculated positions of a celestial object at regular intervals throughout a period.
-
 ### What am I reading?
 
 This is a description for the back-end of a website which tells you whether or not Mercury is in retrograde.  This project is dedicated to Olivia.  This project has been developed by [jakewilliami](https://github.com/jakewilliami) and [andfield](https://github.com/andfield).
@@ -45,20 +41,6 @@ Now we need to set up flask and get our dependencies.  Run
 pip[3] install -r requirements.txt
 ```
 And you are set up.  Run `python[3] app.py` to get the local server running.  Non-local server is currently in progress.  You can run `deactivate` to escape your virtual environment.
-
-
-### What is retrograde motion?
-All objects in the sky move East to West during a night due to the West to East rotation of the Earth.  Retrograde motion is when a planet moves East to West relative to the stars.
-
-Looking down on the solar system from the North, prograde motion occurs when the line from the Earth to the object rotates counterclockwise (in the same way the planets actually move). Retrograde motion occurs when the line rotates clockwise because the Earth passes the planet.  Hence, retrograde motion only occurs if the Earth is moving faster than Mercury.  Mercury will appears to move backwards when we pass it.  This is possible because of Kepler’s second law of planetary motion, which states that planets can move at different speeds during their orbit depending on their proximity to the Sun.  The concept of variable orbital speed comes up again in Kepler's third law.  This latter law states that the time it takes for a planet to orbit the Sun depends on the size of it's orbit, according to the rule
-```
-P^2 = a^3
-```
-with `P` in years, and `a` in astronomical units (AU).
-
-The primary ephemeris we collect with regard to Mercury is it's *Right Ascension* (RA).  [According to the American Institute of Physics](https://www.aip.org/sites/default/files/history/teaching-guides/follow-drinking-gourd/Follow%20the%20Drinking%20Gourd_RA%20Dec%20Handout.pdf), Right Ascension is the astronomical equivalent of longitude.  More specifically, it is the angular distance of an object measured eastward from the *Vernal Equinox*.  For a more detailed description of this, see pp. 17-19, 35-37, 72-74, 179-180, 199 of Montenbruck & Pfleger 2000 book, *Astronomy on the Personal Computer* (Fourth, Completely Revised Edition).  For more basic information on how ephemerides are calculated, go to [the NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/docs/transit_algorithms.html).
-
-Most importantly: *when Mercury's RA is decreasing over time, it is in retrograde*.
 
 ### Calculation and Generation of Ephemerides
 
